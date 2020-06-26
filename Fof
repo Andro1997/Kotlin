@@ -1,0 +1,28 @@
+Если вы хотите перебрать диапазон чисел в обратном порядке, используйте downTo вместо .. или until
+
+for (x in 15 downTo 1) println(x)
+
+По умолчанию операторы .., until и downTo перебирают диапазон с единичным шагом
+При желании можно увеличить размер шага при помощи ключевого слова step. Например, следующий код выводит
+нечетные числа в диапазоне от 1 до 100:
+
+for (x in 1..100 step 2) println(x)
+
+Цикл for также может использоваться для перебора элементов массива. 
+
+for (item in optionsParam) {
+ println("$item is an item in the array")
+}
+
+Также можно выполнить перебор по индексам массива кодом следующего вида:
+
+for (index in optionsParam.indices) {
+ println("Index $index has item ${optionsParam[index]}")
+}
+
+Приведенный выше цикл можно даже немного упростить, возвращая
+индекс массива и значение как часть цикла:
+
+for ((index, item) in optionsParam.withIndex()) {
+ println("Index $index has item $item")
+}
