@@ -1,0 +1,21 @@
+После того как объект будет создан, к его свойствам можно обращаться при помощи оператора «точка» (.)
+
+fun main(args: Array<String>) {
+    class Dog(val name: String, var weight: Int, val breed: String) {
+        fun bark() {
+            println(if (weight < 20) "Yip!" else "Woof")
+        }
+    }
+
+    var myDog = Dog("Fido", 70, "Mixed")
+    println(myDog.name)
+}
+
+Оператор «точка» также может использоваться для вызова функций
+объекта. Например, чтобы вызвать функцию bark объекта Dog, используйте следующий код:
+
+myDog.bark()
+
+Если вы хотите создать массив с элементами Dog, это делается так:
+
+var dogs = arrayOf(Dog("Fido", 70, "Mixed"), Dog("Ripper", 10, "Poodle"))
