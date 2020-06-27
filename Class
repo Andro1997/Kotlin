@@ -19,3 +19,22 @@ myDog.bark()
 Если вы хотите создать массив с элементами Dog, это делается так:
 
 var dogs = arrayOf(Dog("Fido", 70, "Mixed"), Dog("Ripper", 10, "Poodle"))
+
+
+class Song(val title: String, val artist: String, val time: Int){
+    fun play(){
+        println("Playing the song $title by $artist, time $time")
+    }
+    fun stop(){
+        println("Stopped playing $title")
+    }
+}
+fun main(args: Array<String>) {
+    val songOne = Song("Holy war", "Manowar", 3)
+    val songTwo = Song("Du-Hast","Rammstein", 4)
+    val songThree = Song("Little man","Ozzy Osbourne", 5)
+
+    songTwo.play()
+    songTwo.stop()
+    songThree.play()
+}
